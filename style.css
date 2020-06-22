@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'RalewayRegular';
+    src: url('fonts/RalewayRegular.eot');
+    src: url('fonts/RalewayRegular.eot') format('embedded-opentype'),
+         url('fonts/RalewayRegular.woff2') format('woff2'),
+         url('fonts/RalewayRegular.woff') format('woff'),
+         url('fonts/RalewayRegular.ttf') format('truetype'),
+         url('fonts/RalewayRegular.svg#RalewayRegular') format('svg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'RalewayRegular';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: grey;
+    font-feature-settings: "lnum";
+}
+
+.container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    position: relative;
+    width: 440px;
+    height: 600px;
+    background-color: rgb(249,249, 249);
+    box-shadow: 0 0 30px lightgrey;
+    z-index: 0;
+}
+
+
+.bankLogo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.checkout {
+    position: absolute;
+    background-color: grey;
+
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.step-numbers {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    height: 40px;
+    width: 360px;
+}
+
+.stepName {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepLabel {
+    font-size: 12px;
+    font-variant: small-caps;
+}
+.stepCircle {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    align-self: center;
+}
+
+.line { 
+    position: relative;
+    top: 162px;
+    left: 20px;
+    width: 400px;
+    height: 1px;
+    background-color: rgb(97,34,158);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 220px;
+    left: 10px;
+    width: 420px;
+    height: 210px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 2px;
+    height: 60px;
+    background-color: #fff;;
+}
+
+.card-title {
+    /* align-self: flex-start; */
+    margin-left: 20px;
+}
+
+.card-content {
+    /* align-self: flex-end; */
+    color: black;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.amountWord {
+    position: absolute;
+    bottom: 120px;
+    right: 10px;
+}
+
+.amountSum {
+    position: absolute;
+    font-size: xx-large;
+    color: rgb(97,34,158);
+    bottom: 80px;
+    right: 10px;
+}
+
+.btnNextStep {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 60px;
+    border-width: 0;
+    background-color: rgb(97,34,158);
+    color: #fff;
+    font-weight: bold;
+    font-size: x-large;
+    outline: none;
+}
+
+.btnNextStep:hover {
+    background-color: rgb(70, 21, 119);
+}
