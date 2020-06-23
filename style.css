@@ -4,7 +4,7 @@
   src: url('fonts/RalewayRegular.eot') format('embedded-opentype'), url('fonts/RalewayRegular.woff2') format('woff2'), url('fonts/RalewayRegular.woff') format('woff'), url('fonts/RalewayRegular.ttf') format('truetype'), url('fonts/RalewayRegular.svg#RalewayRegular') format('svg');
 }
 
-* {
+body {
   box-sizing: border-box;
   color: #7f7f7f;
   font-family: 'RalewayRegular', sans-serif;
@@ -25,26 +25,26 @@
   width: 100vw;
 }
 
-@media screen and (min-width: 500px) {
-  .form {
-    background-color: #fafafa;
-    border-radius: 15px;
-    box-shadow: 0 0 30px lightgrey;
-    height: 700px;
-    position: absolute;
-    width: 450px;
-  }
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 15px;
+  box-shadow: 0 0 30px lightgrey;
+  height: 100vh;
+  min-height: 560px;
+  max-height: 700px;
+  position: absolute;
+  width: 95vw;
+  max-width: 450px;
 }
 
-@media screen and (max-width: 500px) {
-  .form {
-    background-color: rgb(249, 249, 249);
-    box-shadow: 0 0 30px lightgrey;
-    height: 100%;
-    position: relative;
-    width: 100%;
-    z-index: 0;
-  }
+/* ------ HEADER -------- */
+header {
+  height: 30%;
+  min-height: 160px;
 }
 
 .bankLogo {
@@ -75,15 +75,15 @@
   width: 50;
 }
 
-.step-numbers {
+.stepNumbers {
   align-content: center;
   display: flex;
   height: 40px;
   justify-content: space-around;
   left: 40px;
   position: absolute;
-  top: 150px;
-  width: 360px;
+  top: 140px;
+  width: 80%;
 }
 
 .stepName {
@@ -124,23 +124,24 @@
   background-position: -177px -10px;
 }
 
-.line {
+.stepLine {
   background-color: #FEC524;
   height: 1px;
-  left: 60px;
   position: relative;
-  top: 162px;
-  width: 320px;
+  left: 40px;
+  top: 152px;
+  width: 80%;
 }
 
+/* ------ MAIN -------- */
+main {
+  height: 55%;
+  min-height: 300px;
+}
 .cards {
   display: flex;
   flex-direction: column;
-  height: 360px;
-  left: 10px;
-  position: relative;
-  top: 220px;
-  width: 420px;
+  height: 100%;
 }
 
 .card {
@@ -149,8 +150,7 @@
   display: flex;
   font-size: 14px;
   height: 60px;
-  margin: 2px;
-  overflow: scroll;
+  margin: 1px 20px;
 }
 
 .card:hover {
@@ -166,8 +166,8 @@
   border-radius: 0 0 5px 5px;
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .card-title {
@@ -195,49 +195,29 @@
   margin-right: 20px;
 }
 
+/* ------ FOOTER -------- */
 footer {
-  bottom: 65px;
   display: flex;
   flex-direction: column;
-  height: 40px;
-  justify-content: space-evenly;
-  position: absolute;
-
-  /* background-color: green; */
-  width: 100%;
+  height: 15%;
+  min-height: 100px;
 }
 
 footer > span {
   font-size: 10px;
   text-align: center;
+  margin: 5px;
 }
 
 footer > img {
   align-self: center;
   height: 15px;
-}
-
-.btnNextStep {
-  animation: gradient 4s ease-in-out infinite;
-  animation-play-state: paused;
-  background: linear-gradient(-45deg, #61259e 46.9%, #9065a0 100%, #61259e 46.9%);
-  background-size: 200% 200%;
-  border-radius: 0 0 15px 15px;
-  border-width: 0;
-  bottom: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: x-large;
-  font-weight: bold;
-  height: 60px;
-  outline: none;
-  position: absolute;
-  width: 100%;
+  margin: 5px;
 }
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 
   50% {
@@ -245,10 +225,61 @@ footer > img {
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
-.btnNextStep:hover {
+footer > input  {
+  flex-grow: 1;
+  animation: gradient 4s ease-in-out infinite;
+  animation-play-state: paused;
+  background: linear-gradient(-45deg, #61259e 46.9%, #9065a0 100%, #61259e 46.9%);
+  background-size: 200% 200%;
+  border-radius: 0 0 15px 15px;
+  border-width: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
+  width: 100%;
+}
+
+footer > input:hover {
   animation-play-state: running;
+}
+
+@media screen and (max-width: 568px){
+  .stepLine {
+    top: 132px;
+  }
+
+  .stepNumbers {
+    top: 120px;
+  }
+
+  .stepLabel {
+    font-size: 10px;
+  }
+  .card {
+    font-size: 10px;
+  }
+
+  .amountWord {
+    font-size: 14px;
+  }
+
+  .amountSum {
+    font-size: 18px;
+  }
+
+  footer > img {
+    height: 10px;
+    margin: 1px;
+  }
+
+  footer > span {
+    font-size: 8px;
+    text-align: center;
+    margin: 5px;
+  }
 }
