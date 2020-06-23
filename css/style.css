@@ -8,9 +8,9 @@
     font-family: 'RalewayRegular';
     src: url('../fonts/RalewayRegular.woff2');
     src: url('../fonts/RalewayRegular.eot') format('embedded-opentype'), url('../fonts/RalewayRegular.woff2') format('woff2'), url('../fonts/RalewayRegular.woff') format('woff'), url('../fonts/RalewayRegular.ttf') format('truetype'), url('../fonts/RalewayRegular.svg#RalewayRegular') format('svg');
-  }
+}
   
-  body {
+body {
     box-sizing: border-box;
     color: #7f7f7f;
     font-family: 'RalewayRegular', sans-serif;
@@ -20,17 +20,17 @@
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
-  }
+}
   
-  .container {
+.container {
     background-color: #fff;
     display: flex;
-    height: 80vh;
+    height: 100vh;
     justify-content: center;
     width: 100vw;
-  }
+}
   
-  .form {
+.form {
     display: flex;
     flex-direction: column;
     background-color: #fafafa;
@@ -42,4 +42,11 @@
     margin: auto 0;
     width: 95vw;
     max-width: 450px;
-  }
+}
+
+#screenSize {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+}

@@ -1,7 +1,16 @@
-window.addEventListener('resize', () => {
-    // We execute the same script as before
-    let vh = window.innerHeight;
-    console.log(vh);
+document.onreadystatechange = () =>{  
+    document.readyState === 'complete'? calculateScreenSize() : null;
+}
+
+function calculateScreenSize(){
+    let vh = `${window.innerWidth}px x ${window.innerHeight}px`;
     
-    // document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
+    document.getElementById("screenSize").textContent = vh;
+}
+
+window.addEventListener('resize', () =>{    
+    let vh = `${window.innerWidth}px x ${window.innerHeight}px`;
+    document.getElementById("screenSize").textContent = vh;
+})
+
+ 
