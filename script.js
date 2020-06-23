@@ -8,4 +8,12 @@ function calculateScreenSize(){
     el.style.setProperty('--vh', `${vh}px`);
 }
 
- 
+window.addEventListener('resize',()=>
+{
+    calculateScreenSize();
+
+    let v = window.matchMedia("(orientation: portrait)").matches;
+    viewMode = (v) ? 'portrait' : 'landscape';
+    console.log(viewMode);
+
+})
