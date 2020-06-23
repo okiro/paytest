@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 30%;
-    min-height: 150px;
+    min-height: var(--headerMinHeight);
   }
 
   .logos {
