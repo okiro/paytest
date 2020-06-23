@@ -25,14 +25,12 @@ body {
   width: 100vw;
 }
 
-
-
 .form {
   display: flex;
   flex-direction: column;
   background-color: #fafafa;
   border-radius: 15px;
-  box-shadow: 0 0 30px lightgrey;
+  box-shadow: 0 0 20px 5px lightgrey;
   height: 100vh;
   min-height: 560px;
   max-height: 700px;
@@ -43,23 +41,34 @@ body {
 
 /* ------ HEADER -------- */
 header {
-  height: 30%;
-  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+}
+
+
+
+.logos {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bankLogo {
   height: 80px;
-  left: 20px;
-  position: absolute;
-  top: 20px;
   width: 80px;
+  margin: 20px;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 
 .checkoutLogo {
   height: 45px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
   width: 50;
 }
 
@@ -68,22 +77,15 @@ header {
   font-size: 20px;
   font-variant: small-caps;
   font-weight: 500;
-  height: 45px;
-  position: absolute;
-  right: 20px;
-  top: 70px;
-  width: 50;
+  margin-left: 5px;
 }
 
 .stepNumbers {
-  align-content: center;
+  /* align-content: center; */
   display: flex;
   height: 40px;
   justify-content: space-around;
-  left: 40px;
-  position: absolute;
-  top: 140px;
-  width: 80%;
+  margin: 0 40px
 }
 
 .stepName {
@@ -110,10 +112,11 @@ header {
   padding: 0 5px; 
   height: 23px;
   width: 23px;
+  z-index: 1;
 }
 
 .c1 {
-  background-position: -5px -10px;
+  background-position: -92px -10px;
 }
 
 .c2 {
@@ -129,14 +132,14 @@ header {
   height: 1px;
   position: relative;
   left: 40px;
-  top: 152px;
+  top: 15px;
   width: 80%;
 }
 
 /* ------ MAIN -------- */
 main {
-  height: 55%;
   min-height: 300px;
+  flex: 1;
 }
 .cards {
   display: flex;
@@ -148,7 +151,7 @@ main {
   align-items: center;
   background-color: #fff;
   display: flex;
-  font-size: 14px;
+  font-size: small;
   height: 20%;
   max-height: 60px;
   margin: 1px 20px;
@@ -169,7 +172,7 @@ main {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  max-height: 100px;
+  max-height: 140px;
 }
 
 .cardTitle {
@@ -219,6 +222,9 @@ footer > img {
 
 
 footer > input  {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   flex-grow: 1;
   background:  #2A0055;
   background-size: 200% 200%;
@@ -236,41 +242,34 @@ footer > input:hover {
 }
 
 @media screen and (max-width: 568px){
-  .stepLine {
-    top: 132px;
-  }
-
-  .stepNumbers {
-    top: 120px;
-  }
-
   .stepLabel {
     font-size: xx-small;
   }
   .card {
+    align-items: flex-start;
     flex-direction: column;
     justify-content: center;
   }
 
   .cardTitle {
-    margin: 0 auto;
+    margin: 0 10px;
   }
   .cardContent {
-    margin: 0 auto;
-  }
+    margin: 0 10px;
+  } 
 
   .bottomCard {
     align-items: center;
   }
   .amountWord {
-    font-size: small;
+    font-size: medium;
   }
   .amountSum {
     font-size: x-large;
   }
 
   footer > img {
-    height: 10px;
+    height: 8px;
     margin: 1px;
   }
 
