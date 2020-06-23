@@ -20,12 +20,12 @@ body {
     background-color: #fff;
     display: flex;
     height: 100vh;
-    justify-content: center;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
   
 .form {
-  align-self: center;
     display: flex;
     flex-direction: column;
     background-color:#fafafa;
