@@ -1,7 +1,6 @@
 footer {
     display: flex;
     flex-direction: column;
-    height: 15%;
     min-height: 100px;
   }
   

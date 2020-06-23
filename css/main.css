@@ -1,10 +1,12 @@
 main {
     min-height: 300px;
     flex: 1;
+
   }
   .cards {
     display: flex;
     flex-direction: column;
+    min-height: 300px;
     height: 100%;
   }
   
@@ -12,8 +14,8 @@ main {
     align-items: center;
     background-color: #fff;
     display: flex;
+    flex-grow: 1;
     font-size: small;
-    height: 20%;
     max-height: 60px;
     margin: 1px 20px;
   }
