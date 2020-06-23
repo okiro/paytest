@@ -1,19 +1,36 @@
-document.onreadystatechange = () =>{  
-    document.readyState === 'complete'? calculateScreenSize() : null;
+class ScreenSize {
+    static height() {
+        return window.innerHeight;
+    }
+    static width() {
+        return window.innerWidth;
+    }
 }
 
-function calculateScreenSize(){
-    let vh = window.innerHeight * 0.01;
-    el = document.getElementById('container');
-    el.style.setProperty('--vh', `${vh}px`);
+
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+        setMobileViewportHeight();
+        showNotification();
+    };
 }
 
-window.addEventListener('resize',()=>
-{
-    calculateScreenSize();
+function setMobileViewportHeight() {
+    let el = document.getElementById('container');
+    el.style.setProperty('--vh', `${ScreenSize.height()}px`);
+}
 
-    let v = window.matchMedia("(orientation: portrait)").matches;
-    viewMode = (v) ? 'portrait' : 'landscape';
-    console.log(viewMode);
+window.addEventListener('resize', () => {
+    setMobileViewportHeight();
+    showNotification();
 
 })
+
+function showNotification() {
+    let el = document.getElementById('notification')
+    let v = window.matchMedia("(orientation: portrait)").matches;
+    viewMode = (v) ? 'Portrait' : 'Landscape';
+    el.textContent = `${viewMode} mode: ${ScreenSize.height()}x${ScreenSize.width()}`;
+    el.className = 'show';
+    setTimeout(() => { el.className = 'hide' }, 2000);
+}

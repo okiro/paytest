@@ -3,3 +3,25 @@
 @import 'main.css';
 @import 'footer.css';
 @import 'responsive.css';
+#notification {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    padding: 2px;
+    opacity: 0;
+}
+
+#notification.show {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+#notification.hide {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}

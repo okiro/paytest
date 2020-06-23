@@ -1,69 +1,63 @@
-
-@media screen and (max-width: 568px){
-    
+@media screen and (max-width: 568px) {
     header {
-      height:15%;
+        height: 15%;
     }
     .bankLogo {
-      height: 50px;
-      width: 50px;
-      margin: 20px;
+        height: 50px;
+        width: 50px;
+        margin: 20px;
     }
     .checkoutLogo {
-      height: 23px;
+        height: 23px;
     }
     .checkoutName {
-      font-size: small;
+        font-size: small;
     }
     .container {
-      height: calc(var(--vh, 1vh) * 100);
+        height: var(--vh);
     }
     .form {
-      border-radius: 0;
-      box-shadow: none;
-      max-width: 100%;
-      max-height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: 100%;
+        max-height: 100%;
     }
-
     .stepLabel {
-      font-size: xx-small;
+        font-size: xx-small;
     }
     .card {
-      align-items: flex-start;
-      flex-direction: column;
-      justify-content: center;
-      margin: 1px 10px;;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1px 10px;
+        ;
     }
-  
     .cardTitle {
-      margin: 0 10px;
-      margin-bottom: 3px;
+        margin: 0 10px;
+        margin-bottom: 3px;
     }
     .cardContent {
-      margin: 0 10px;
-    } 
-  
+        margin: 0 10px;
+    }
     .bottomCard {
-      align-items: flex-end;
+        align-items: flex-end;
     }
     .amountWord {
-      font-size: x-large;
+        font-size: x-large;
     }
     .amountSum {
-      font-size: xx-large;
+        font-size: xx-large;
     }
-  
-    footer > img {
-      height: 8px;
-      margin-top: 5px;
+    footer>img {
+        height: 8px;
+        margin-top: 5px;
     }
-  
-    footer > span {
-      font-size: xx-small;
-      text-align: center;
-      margin: 5px;
+    footer>span {
+        font-size: xx-small;
+        text-align: center;
+        margin: 5px;
     }
-    footer > input {
-      border-radius: 0;
+    footer>input {
+        border-radius: 0;
     }
-  }
+}
