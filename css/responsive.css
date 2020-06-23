@@ -1,0 +1,39 @@
+
+@media screen and (max-width: 568px){
+    .stepLabel {
+      font-size: xx-small;
+    }
+    .card {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .cardTitle {
+      margin: 0 10px;
+    }
+    .cardContent {
+      margin: 0 10px;
+    } 
+  
+    .bottomCard {
+      align-items: center;
+    }
+    .amountWord {
+      font-size: medium;
+    }
+    .amountSum {
+      font-size: x-large;
+    }
+  
+    footer > img {
+      height: 8px;
+      margin: 1px;
+    }
+  
+    footer > span {
+      font-size: xx-small;
+      text-align: center;
+      margin: 5px;
+    }
+  }

@@ -1,0 +1,46 @@
+@import 'header.css';
+@import 'main.css';
+@import 'footer.css';
+@import 'responsive.css';
+
+
+@font-face {
+    font-family: 'RalewayRegular';
+    src: url('../fonts/RalewayRegular.woff2');
+    src: url('../fonts/RalewayRegular.eot') format('embedded-opentype'), url('../fonts/RalewayRegular.woff2') format('woff2'), url('../fonts/RalewayRegular.woff') format('woff'), url('../fonts/RalewayRegular.ttf') format('truetype'), url('../fonts/RalewayRegular.svg#RalewayRegular') format('svg');
+  }
+  
+  body {
+    box-sizing: border-box;
+    color: #7f7f7f;
+    font-family: 'RalewayRegular', sans-serif;
+    font-feature-settings: "lnum";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .container {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px lightgrey;
+    height: 100vh;
+    min-height: 560px;
+    max-height: 700px;
+    position: absolute;
+    width: 95vw;
+    max-width: 450px;
+  }

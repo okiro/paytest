@@ -1,0 +1,94 @@
+header {
+    display: flex;
+    flex-direction: column;
+    min-height: 170px;
+  }
+
+  .logos {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bankLogo {
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+  }
+  
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .checkoutLogo {
+    height: 45px;
+    width: 50;
+  }
+  
+  .checkoutName {
+    color: #61259e;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  
+  .stepNumbers {
+    /* align-content: center; */
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    margin: 0 40px
+  }
+  
+  .stepName {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .stepLabel {
+    color: #aaa;
+    font-size: 11px;
+  }
+  
+  .labelA {
+    color: #7f7f7f;
+  }
+  
+  .stepCircle {
+    align-self: center;
+    box-sizing: content-box;
+    background: url('../img/steps.png');
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    padding: 0 5px; 
+    height: 23px;
+    width: 23px;
+    z-index: 1;
+  }
+  
+  .c1 {
+    background-position: -92px -10px;
+  }
+  
+  .c2 {
+    background-position: -134px -10px;
+  }
+  
+  .c3 {
+    background-position: -177px -10px;
+  }
+  
+  .stepLine {
+    background-color: #FEC524;
+    height: 1px;
+    position: relative;
+    left: 40px;
+    top: 15px;
+    width: 80%;
+  }
+  
