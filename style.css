@@ -1,255 +1,254 @@
 @font-face {
-    font-family: 'RalewayRegular';
-    src: url('fonts/RalewayRegular.eot');
-    src: url('fonts/RalewayRegular.eot') format('embedded-opentype'), url('fonts/RalewayRegular.woff2') format('woff2'), url('fonts/RalewayRegular.woff') format('woff'), url('fonts/RalewayRegular.ttf') format('truetype'), url('fonts/RalewayRegular.svg#RalewayRegular') format('svg');
+  font-family: 'RalewayRegular';
+  src: url('fonts/RalewayRegular.eot');
+  src: url('fonts/RalewayRegular.eot') format('embedded-opentype'), url('fonts/RalewayRegular.woff2') format('woff2'), url('fonts/RalewayRegular.woff') format('woff'), url('fonts/RalewayRegular.ttf') format('truetype'), url('fonts/RalewayRegular.svg#RalewayRegular') format('svg');
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'RalewayRegular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    color: #7F7F7F;
-    font-feature-settings: "lnum";
+  box-sizing: border-box;
+  color: #7f7f7f;
+  font-family: 'RalewayRegular', sans-serif;
+  font-feature-settings: "lnum";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
 }
 
 @media screen and (min-width: 500px) {
-    .form {
-        position: absolute;
-        width: 454px;
-        height: 696px;
-        background: #FAFAFA;
-        border-radius: 15px;
-        box-shadow: 0 0 30px lightgrey;
-    }
+  .form {
+    background-color: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 0 30px lightgrey;
+    height: 700px;
+    position: absolute;
+    width: 450px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .form {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(249, 249, 249);
-        box-shadow: 0 0 30px lightgrey;
-        z-index: 0;
-    }
+  .form {
+    background-color: rgb(249, 249, 249);
+    box-shadow: 0 0 30px lightgrey;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+  }
 }
 
 .bankLogo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 80px;
-    height: 80px;
+  height: 80px;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  width: 80px;
 }
 
 .checkoutLogo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 50;
-    height: 45px;
+  height: 45px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50;
 }
 
 .checkoutName {
-    position: absolute;
-    color: #61259E;
-    font-variant: small-caps;
-    font-weight: 500;
-    font-size: 20px;
-    top: 70px;
-    right: 20px;
-    width: 50;
-    height: 45px;
+  color: #61259e;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: 500;
+  height: 45px;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  width: 50;
 }
 
 .step-numbers {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    position: absolute;
-    top: 150px;
-    left: 40px;
-    height: 40px;
-    width: 360px;
+  align-content: center;
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+  left: 40px;
+  position: absolute;
+  top: 150px;
+  width: 360px;
 }
 
 .stepName {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .stepLabel {
-    font-size: 11px;
-    color: #aaaaaa;
+  color: #aaa;
+  font-size: 11px;
 }
 
 .labelA {
-    color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 .stepCircle {
-    background: url('img/steps.png');
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 23px;
-    margin: 0 5px;
-    align-self: center;
+  align-self: center;
+  box-sizing: content-box;
+  background: url('img/steps.png');
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  padding: 0 5px; 
+  height: 23px;
+  width: 23px;
 }
 
 .c1 {
-    background-position: -1px -2px;
-    background-size: 80px;
+  background-position: -5px -10px;
 }
 
 .c2 {
-    background-position: -1px -2px;
-    background-size: 80px;
+  background-position: -134px -10px;
 }
 
 .c3 {
-    background-position: -1px -2px;
-    background-size: 80px;
+  background-position: -177px -10px;
 }
 
 .line {
-    position: relative;
-    top: 162px;
-    left: 20px;
-    width: 100px;
-    height: 1px;
-    background-color: rgb(97, 34, 158);
+  background-color: #FEC524;
+  height: 1px;
+  left: 60px;
+  position: relative;
+  top: 162px;
+  width: 320px;
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 220px;
-    left: 10px;
-    width: 420px;
-    height: 360px;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  left: 10px;
+  position: relative;
+  top: 220px;
+  width: 420px;
 }
 
 .card {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    margin: 2px;
-    height: 60px;
-    background-color: #fff;
-    overflow: scroll;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  font-size: 14px;
+  height: 60px;
+  margin: 2px;
+  overflow: scroll;
 }
 
 .card:hover {
-    background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
 }
 
 .topCard {
-    border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .bottomCard {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    border-radius: 0 0 5px 5px;
-    flex-grow: 2;
+  align-items: flex-end;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: center;
 }
 
 .card-title {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .card-content {
-    text-align: right;
-    color: #3E3E3E;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: 20px;
-    max-width: 200px;
+  color: #3e3e3e;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 20px;
+  max-width: 200px;
+  text-align: right;
 }
 
 .amountWord {
-    font-size: 20px;
-    font-weight: 200;
-    margin-right: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  margin-right: 20px;
 }
 
 .amountSum {
-    margin-right: 20px;
-    font-size: xx-large;
-    color: #3E3E3E;
+  color: #3e3e3e;
+  font-size: xx-large;
+  margin-right: 20px;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: absolute;
-    /* background-color: green; */
-    width: 100%;
-    height: 40px;
-    bottom: 65px;
+  bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: space-evenly;
+  position: absolute;
+
+  /* background-color: green; */
+  width: 100%;
 }
 
-footer>span {
-    font-size: 10px;
-    text-align: center;
+footer > span {
+  font-size: 10px;
+  text-align: center;
 }
 
-footer>img {
-    height: 15px;
-    align-self: center;
+footer > img {
+  align-self: center;
+  height: 15px;
 }
 
 .btnNextStep {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    border-width: 0;
-    border-radius: 0 0 15px 15px;
-    /* background-color: rgb(97, 34, 158); */
-    color: #fff;
-    font-weight: bold;
-    font-size: x-large;
-    outline: none;
-    cursor: pointer;
-}
-
-.btnNextStep:hover {
-    background-color: rgb(70, 21, 119);
+  animation: gradient 4s ease-in-out infinite;
+  animation-play-state: paused;
+  background: linear-gradient(-45deg, #61259e 46.9%, #9065a0 100%, #61259e 46.9%);
+  background-size: 200% 200%;
+  border-radius: 0 0 15px 15px;
+  border-width: 0;
+  bottom: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
+  height: 60px;
+  outline: none;
+  position: absolute;
+  width: 100%;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.btnNextStep {
-    background: linear-gradient(-45deg, #61259E 46.9%, #8926AC 100%, #61259E 46.9%, #8926AC 100%);
-    background-size: 200% 200%;
-    animation: gradient 5s ease-in-out infinite;
+.btnNextStep:hover {
+  animation-play-state: running;
 }
