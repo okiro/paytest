@@ -32,5 +32,5 @@ function showNotification() {
     viewMode = (v) ? 'Portrait' : 'Landscape';
     el.textContent = `${viewMode} mode: ${ScreenSize.height()}x${ScreenSize.width()}`;
     el.className = 'show';
-    setTimeout(() => { el.className = 'hide' }, 2000);
+    setTimeout(() => { el.className = 'hide' }, 3000);
 }
