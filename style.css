@@ -149,7 +149,8 @@ main {
   background-color: #fff;
   display: flex;
   font-size: 14px;
-  height: 60px;
+  height: 20%;
+  max-height: 60px;
   margin: 1px 20px;
 }
 
@@ -168,13 +169,14 @@ main {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+  max-height: 100px;
 }
 
-.card-title {
+.cardTitle {
   margin-left: 20px;
 }
 
-.card-content {
+.cardContent {
   color: #3e3e3e;
   font-weight: bold;
   margin-left: auto;
@@ -184,7 +186,7 @@ main {
 }
 
 .amountWord {
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 200;
   margin-right: 20px;
 }
@@ -215,25 +217,10 @@ footer > img {
   margin: 5px;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0 50%;
-  }
-}
 
 footer > input  {
   flex-grow: 1;
-  animation: gradient 4s ease-in-out infinite;
-  animation-play-state: paused;
-  background: linear-gradient(-45deg, #61259e 46.9%, #9065a0 100%, #61259e 46.9%);
+  background:  #2A0055;
   background-size: 200% 200%;
   border-radius: 0 0 15px 15px;
   border-width: 0;
@@ -245,7 +232,7 @@ footer > input  {
 }
 
 footer > input:hover {
-  animation-play-state: running;
+  background: linear-gradient(-45deg, #7040A0 46.9%, #2A0055 100%)
 }
 
 @media screen and (max-width: 568px){
@@ -258,18 +245,28 @@ footer > input:hover {
   }
 
   .stepLabel {
-    font-size: 10px;
+    font-size: xx-small;
   }
   .card {
-    font-size: 10px;
+    flex-direction: column;
+    justify-content: center;
   }
 
+  .cardTitle {
+    margin: 0 auto;
+  }
+  .cardContent {
+    margin: 0 auto;
+  }
+
+  .bottomCard {
+    align-items: center;
+  }
   .amountWord {
-    font-size: 14px;
+    font-size: small;
   }
-
   .amountSum {
-    font-size: 18px;
+    font-size: x-large;
   }
 
   footer > img {
@@ -278,7 +275,7 @@ footer > input:hover {
   }
 
   footer > span {
-    font-size: 8px;
+    font-size: xx-small;
     text-align: center;
     margin: 5px;
   }
