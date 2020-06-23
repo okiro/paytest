@@ -1,6 +1,7 @@
 header {
     display: flex;
     flex-direction: column;
+    height: 30%;
     min-height: 170px;
   }
 
@@ -35,9 +36,8 @@ header {
     font-weight: 500;
     margin-left: 5px;
   }
-  
+
   .stepNumbers {
-    /* align-content: center; */
     display: flex;
     height: 40px;
     justify-content: space-around;

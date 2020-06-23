@@ -1,6 +1,13 @@
 
 @media screen and (max-width: 568px){
     
+    header {
+      height: 20%;
+    }
+    .container {
+      height: 80vh;
+      background-color: red;
+    }
     .form {
       border-radius: 0;
       box-shadow: none;
