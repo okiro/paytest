@@ -17,7 +17,6 @@
     }
     .container {
       height: calc(var(--vh, 1vh) * 100);
-      background-color: red;
     }
     .form {
       border-radius: 0;
