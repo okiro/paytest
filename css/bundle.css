@@ -3,11 +3,3 @@
 @import 'main.css';
 @import 'footer.css';
 @import 'responsive.css';
-
-#screenSize {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    background-color: white;
-  }
-  

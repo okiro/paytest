@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 30%;
-    min-height: 170px;
+    min-height: 150px;
   }
 
   .logos {
@@ -26,12 +26,11 @@ header {
   
   .checkoutLogo {
     height: 45px;
-    width: 50;
   }
   
   .checkoutName {
     color: #61259e;
-    font-size: 20px;
+    font-size: x-large;
     font-variant: small-caps;
     font-weight: 500;
     margin-left: 5px;

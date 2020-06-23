@@ -2,7 +2,18 @@
 @media screen and (max-width: 568px){
     
     header {
-      height: 20%;
+      height:15%;
+    }
+    .bankLogo {
+      height: 50px;
+      width: 50px;
+      margin: 20px;
+    }
+    .checkoutLogo {
+      height: 23px;
+    }
+    .checkoutName {
+      font-size: small;
     }
     .container {
       height: calc(var(--vh, 1vh) * 100);
@@ -27,19 +38,20 @@
   
     .cardTitle {
       margin: 0 10px;
+      margin-bottom: 3px;
     }
     .cardContent {
       margin: 0 10px;
     } 
   
     .bottomCard {
-      align-items: center;
+      align-items: flex-end;
     }
     .amountWord {
-      font-size: medium;
+      font-size: x-large;
     }
     .amountSum {
-      font-size: x-large;
+      font-size: xx-large;
     }
   
     footer > img {
