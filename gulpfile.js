@@ -2,49 +2,62 @@ const concat = require('gulp-concat');
 const importCss = require('gulp-import-css');
 const babel = require("gulp-babel");
 const minify = require("gulp-babel-minify");
-const {src, dest, series} = require('gulp');
+const webpack = require('webpack-stream');
+const removeCode = require('gulp-remove-code');
+const { src, dest, series } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const image = require('gulp-image');
 const del = require('del');
 
 const destFolder = 'docs';
 
-function clean(){
+function clean() {
     return del(`${destFolder}/*`)
 }
 
-function css(){
+function css() {
     return src('src/css/bundle.css')
-    .pipe(importCss())
-    .pipe(cleanCSS({debug: true}, (details) => {
-        console.log(`${details.name}: ${details.stats.originalSize}`);
-        console.log(`${details.name}: ${details.stats.minifiedSize}`);
-      }))
-    .pipe(dest(`${destFolder}/css`));
+        .pipe(importCss())
+        .pipe(cleanCSS({ debug: true }, (details) => {
+            console.log(`${details.name}: ${details.stats.originalSize}`);
+            console.log(`${details.name}: ${details.stats.minifiedSize}`);
+        }))
+        .pipe(dest(`${destFolder}/css`));
 }
 
-function js(){
+function js() {
     return src('src/js/*.js')
-    .pipe(babel())
-    .pipe(minify())
-    .pipe(concat('bundle.js'))
-    .pipe(dest(`${destFolder}/js`));
+        .pipe(removeCode({ production: true }))
+        .pipe(webpack({
+            mode: "production",
+            output: {
+                filename: 'bundle.js'
+            }
+        }))
+        // .pipe(babel())
+        // .pipe(minify())
+        .pipe(dest(`${destFolder}/js`));
 }
 
-function images(){
+function images() {
     return src('src/img/*.png')
-    .pipe(image())
-    .pipe(dest(`${destFolder}/img`));
+        .pipe(image())
+        .pipe(dest(`${destFolder}/img`));
 }
 
-function fonts(){
+function fonts() {
     return src('src/fonts/*')
-    .pipe(dest(`${destFolder}/fonts`));
+        .pipe(dest(`${destFolder}/fonts`));
 }
 
-function html(){
-    return src('src/*.html')
-    .pipe(dest(`${destFolder}/`));
+function views() {
+    return src('src/views/*')
+        .pipe(dest(`${destFolder}/views`));
 }
 
-exports.default = series(clean, css, js, images, fonts, html);
+function index() {
+    return src('src/index.html')
+        .pipe(dest(`${destFolder}/`));
+}
+
+exports.default = series(clean, css, js, images, fonts, views, index);

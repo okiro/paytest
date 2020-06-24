@@ -1,3 +1,9 @@
+import { getHtml } from './viewLoader.js';
+
+getHtml('header', './views/header.html');
+getHtml('main', './views/main.html');
+getHtml('footer', './views/footer.html');
+
 class ScreenSize {
     static height() {
         return window.innerHeight;
@@ -10,12 +16,13 @@ class ScreenSize {
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         setMobileViewportHeight();
-        showNotification()();
     };
 }
 window.addEventListener('resize', () => {
     setMobileViewportHeight();
-    showNotification()();  
+    //removeIf(production)
+    showNotification()();
+    //endRemoveIf(production)
 })
 
 function setMobileViewportHeight() {
@@ -23,12 +30,12 @@ function setMobileViewportHeight() {
     el.style.setProperty('--vh', `${ScreenSize.height()}px`);
 }
 
-
-function showNotification(){
+//removeIf(production)
+function showNotification() {
     let timeoutId;
     return () => {
         clearTimeout(timeoutId);
-        let el = createElement('div','notification');
+        let el = createElement('div', 'notification');
         let v = window.matchMedia("(orientation: portrait)").matches;
         let viewMode = (v) ? 'Portrait' : 'Landscape';
         el.textContent = `${viewMode} mode: ${ScreenSize.height()}x${ScreenSize.width()}`;
@@ -37,16 +44,16 @@ function showNotification(){
     }
 }
 
-function createElement(elementName, elemendId = ''){
+function createElement(elementName, elemendId = '') {
     if (elemendId != '') {
         let foundEl = document.getElementById(elemendId);
         if (foundEl) {
             return foundEl;
         }
-    } 
+    }
     let el = document.createElement(elementName);
-    el.setAttribute('id',elemendId);
+    el.setAttribute('id', elemendId);
     document.body.appendChild(el);
     return el;
 }
-
+//endRemoveIf(production)
