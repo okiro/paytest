@@ -1,5 +1,7 @@
 const concat = require('gulp-concat');
 const importCss = require('gulp-import-css');
+const babel = require("gulp-babel");
+const minify = require("gulp-babel-minify");
 const {src, dest, series} = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const image = require('gulp-image');
@@ -23,6 +25,8 @@ function css(){
 
 function js(){
     return src('src/js/*.js')
+    .pipe(babel())
+    .pipe(minify())
     .pipe(concat('bundle.js'))
     .pipe(dest(`${destFolder}/js`));
 }
