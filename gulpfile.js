@@ -3,8 +3,13 @@ const importCss = require('gulp-import-css');
 const {src, dest, series} = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const image = require('gulp-image');
+const del = require('del');
 
 const destFolder = 'docs';
+
+function clean(){
+    return del(`${destFolder}/*`)
+}
 
 function css(){
     return src('src/css/bundle.css')
@@ -38,4 +43,4 @@ function html(){
     .pipe(dest(`${destFolder}/`));
 }
 
-exports.default = series(css, js, images, fonts, html);
+exports.default = series(clean, css, js, images, fonts, html);
