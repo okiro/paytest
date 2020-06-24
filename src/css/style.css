@@ -38,7 +38,6 @@ body {
     background-color: #fafafa;
     border-radius: 15px;
     box-shadow: 0 0 20px 5px lightgrey;
-    /* min-height: var(--formMinHeight); */
     height: 100%;
     width: 100%;
     max-height: 700px;
