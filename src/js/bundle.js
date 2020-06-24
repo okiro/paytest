@@ -30,7 +30,7 @@ function showNotification(){
         clearTimeout(timeoutId);
         let el = createElement('div','notification');
         let v = window.matchMedia("(orientation: portrait)").matches;
-        viewMode = (v) ? 'Portrait' : 'Landscape';
+        let viewMode = (v) ? 'Portrait' : 'Landscape';
         el.textContent = `${viewMode} mode: ${ScreenSize.height()}x${ScreenSize.width()}`;
         el.className = 'show';
         timeoutId = setTimeout(() => { el.className = 'hide' }, 2000);
