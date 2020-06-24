@@ -30,7 +30,7 @@ function images(){
 
 function fonts(){
     return src('src/fonts/*')
-    .pipe(dest(`${destFolder}/img`));
+    .pipe(dest(`${destFolder}/fonts`));
 }
 
 function html(){
