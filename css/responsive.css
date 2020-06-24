@@ -62,7 +62,7 @@
     }
 }
 
-@media screen and (max-height: 568px) {
+@media screen and (max-height: 451px) {
     .container {
         height: 100%;
     }
