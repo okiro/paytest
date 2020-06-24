@@ -1,16 +1,41 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
- 
-gulp.task('pack-js', function () {    
-    return gulp.src(['src/js/*.js])
-        .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('public/js'));
-});
- 
-gulp.task('pack-css', function () {    
-    return gulp.src(['src/css/*.css'])
-        .pipe(concat('style.css'))
-        .pipe(gulp.dest('public/css'));
-});
- 
-gulp.task('default', ['pack-js', 'pack-css']);
+const concat = require('gulp-concat');
+const importCss = require('gulp-import-css');
+const {src, dest, series} = require('gulp');
+const cleanCSS = require('gulp-clean-css');
+const image = require('gulp-image');
+
+const destFolder = 'docs';
+
+function css(){
+    return src('src/css/bundle.css')
+    .pipe(importCss())
+    .pipe(cleanCSS({debug: true}, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+      }))
+    .pipe(dest(`${destFolder}/css`));
+}
+
+function js(){
+    return src('src/js/*.js')
+    .pipe(concat('bundle.js'))
+    .pipe(dest(`${destFolder}/js`));
+}
+
+function images(){
+    return src('src/img/*.png')
+    .pipe(image())
+    .pipe(dest(`${destFolder}/img`));
+}
+
+function fonts(){
+    return src('src/fonts/*')
+    .pipe(dest(`${destFolder}/img`));
+}
+
+function html(){
+    return src('src/*.html')
+    .pipe(dest(`${destFolder}/`));
+}
+
+exports.default = series(css, js, images, fonts, html);

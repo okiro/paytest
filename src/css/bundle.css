@@ -1,8 +1,8 @@
-@import 'style.css';
-@import 'header.css';
-@import 'main.css';
-@import 'footer.css';
-@import 'responsive.css';
+@import url('style.css');
+@import url('header.css');
+@import url('main.css');
+@import url('footer.css');
+@import url('responsive.css');
 
 #notification {
     position: absolute;
