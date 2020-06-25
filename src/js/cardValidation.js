@@ -1,5 +1,5 @@
 export function cardValidation(){
-    const inputFields = document.getElementsByTagName('input');    
+    let inputFields = document.getElementsByTagName('input');  
     for (let el of inputFields){
         el.addEventListener('input', e => {
             el.value = el.value.replace(/\D/,'');

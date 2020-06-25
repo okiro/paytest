@@ -1,7 +1,4 @@
-const concat = require('gulp-concat');
 const importCss = require('gulp-import-css');
-const babel = require("gulp-babel");
-const minify = require("gulp-babel-minify");
 const webpack = require('webpack-stream');
 const removeCode = require('gulp-remove-code');
 const { src, dest, series } = require('gulp');
@@ -29,13 +26,12 @@ function js() {
     return src('src/js/*.js')
         .pipe(removeCode({ production: true }))
         .pipe(webpack({
+            // devtool: 'source-map',
             mode: "production",
             output: {
                 filename: 'bundle.js'
             }
         }))
-        // .pipe(babel())
-        // .pipe(minify())
         .pipe(dest(`${destFolder}/js`));
 }
 

@@ -1,6 +1,8 @@
-export async function getHtml(tag, link) {
-    let response = await fetch(link)
+export async function getHtml(tag, link, callback) {
+    await fetch(link)
         .then(r => r.text())
-        .then(d => d);
-    document.querySelector(tag).innerHTML = response;
+        .then(d => {
+            document.querySelector(tag).innerHTML = d;
+        });
+    if(callback) callback();
 }
