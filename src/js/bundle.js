@@ -1,7 +1,8 @@
 import { getHtml } from './viewLoader.js';
+import { cardValidation } from './cardValidation.js';
 
 getHtml('header', './views/header.html');
-getHtml('main', './views/main.html');
+getHtml('main', './views/step2.html');
 getHtml('footer', './views/footer.html');
 
 class ScreenSize {
@@ -16,6 +17,7 @@ class ScreenSize {
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         setMobileViewportHeight();
+        cardValidation();
     };
 }
 window.addEventListener('resize', () => {

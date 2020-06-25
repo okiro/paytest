@@ -1,11 +1,4 @@
-header {
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    min-height: var(--headerMinHeight);
-  }
-
-  .logos {
+.logos {
     display: flex;
     justify-content: space-between;
   }
@@ -80,6 +73,14 @@ header {
   
   .c3 {
     background-position: -177px -10px;
+  }
+
+  .cdone {
+    background-position: -4px -10px;
+  }
+
+  .c2active {
+    background-position: -47px -10px;
   }
   
   .stepLine {

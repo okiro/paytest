@@ -1,0 +1,101 @@
+#info {
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    height: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: red; */
+}
+
+#infoSum {
+    color: #3e3e3e;
+    font-size: xx-large;
+}
+
+#infoBen {
+    font-weight: 600;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    min-height: 220px;
+    height: 70%;
+    margin: 0 30px;
+}
+
+#inputTitle {
+    font-size: medium;
+    line-height: 2;
+}
+
+.inputFields {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#ccnumber, #ccexp, #cccvc {
+    box-sizing: border-box;
+    height: 45px;
+    border: 0;
+    padding: 0 10px;
+    font-size: medium;
+    letter-spacing: 0.12em;
+    color: black;
+    width: 100%;
+}
+
+
+#ccnumber {
+    grid-column: span 2;
+    border: solid 1px;
+    border-color: #F0F0F0;
+    border-radius: 7px 7px 0 0;
+    
+}
+
+#ccexp{
+    border: solid 1px;
+    border-color: #F0F0F0;
+    border-radius: 0 0 0 7px;
+    border-top: 0;
+}
+
+#cccvc {
+    border: solid 1px;
+    border-color: #F0F0F0;
+    border-radius: 0 0 7px 0; 
+    border-top: 0;
+    border-left: 0;
+}
+
+input:focus{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #B38CDB;
+}
+
+.inputErrorIcon {
+    background: url('../img/errorIcon.png') no-repeat;
+    background-color: white;
+    background-position: 95% 50%;
+    border-color: #FF7E8D !important;
+    color: #FF7E8D !important;
+}
+
+.inputErrorIcon:focus{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #FF7E8D;
+    color: #FF7E8D;
+}
+
+#inputError {
+    font-size: medium;
+    color: #FF7E8D;
+    line-height: 2;
+}
+

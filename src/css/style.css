@@ -43,3 +43,21 @@ body {
     max-height: 700px;
     max-width: 450px;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    min-height: var(--headerMinHeight);
+  }
+
+main {
+    min-height: var(--mainMinHeight);
+    flex: 1;
+  }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    min-height: var(--footerMinHeight);
+  }

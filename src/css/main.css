@@ -1,8 +1,3 @@
-main {
-    min-height: var(--mainMinHeight);
-    flex: 1;
-
-  }
   .cards {
     display: flex;
     flex-direction: column;
