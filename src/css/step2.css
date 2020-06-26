@@ -37,7 +37,9 @@
     grid-template-columns: 50% 50%;
 }
 
-#ccnumber, #ccexp, #cccvc {
+#ccnumber,
+#ccexp,
+#cccvc {
     box-sizing: border-box;
     height: 45px;
     border: 0;
@@ -48,16 +50,14 @@
     width: 100%;
 }
 
-
 #ccnumber {
     grid-column: span 2;
     border: solid 1px;
     border-color: #F0F0F0;
     border-radius: 7px 7px 0 0;
-    
 }
 
-#ccexp{
+#ccexp {
     border: solid 1px;
     border-color: #F0F0F0;
     border-radius: 0 0 0 7px;
@@ -67,15 +67,18 @@
 #cccvc {
     border: solid 1px;
     border-color: #F0F0F0;
-    border-radius: 0 0 7px 0; 
+    border-radius: 0 0 7px 0;
     border-top: 0;
     border-left: 0;
 }
 
-input:focus{
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: #B38CDB;
+#ccnumber:focus,
+#ccexp:focus,
+#cccvc:focus {
+    border: 1px solid #B38CDB !important;
+    position: relative;
+    box-shadow: 0 0 0 1px #B38CDB;
+    outline-style: none;
 }
 
 .inputErrorIcon {
@@ -86,8 +89,8 @@ input:focus{
     color: #FF7E8D !important;
 }
 
-.inputErrorIcon:focus{
-    outline-style: solid;
+.inputErrorIcon:focus {
+    /* outline-style: solid; */
     outline-width: 2px;
     outline-color: #FF7E8D;
     color: #FF7E8D;
@@ -99,3 +102,13 @@ input:focus{
     line-height: 2;
 }
 
+@media screen and (max-width: 568px) {
+    #ccnumber,
+    #ccexp,
+    #cccvc {
+        font-size: small;
+    }
+    #inputError {
+        font-size: x-small;
+    }
+}

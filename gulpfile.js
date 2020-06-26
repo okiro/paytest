@@ -26,7 +26,7 @@ function js() {
     return src('src/js/*.js')
         .pipe(removeCode({ production: true }))
         .pipe(webpack({
-            // devtool: 'source-map',
+            devtool: 'source-map',
             mode: "production",
             output: {
                 filename: 'bundle.js'

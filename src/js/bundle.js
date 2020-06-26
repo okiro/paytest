@@ -1,8 +1,14 @@
 import { getHtml } from './viewLoader.js';
 import { cardValidation } from './cardValidation.js';
+import { DomManipulation } from './DomManipulation.js';
+
+let dm = new DomManipulation();
 
 getHtml('header', './views/header.html');
-getHtml('main', './views/step2.html', cardValidation);
+getHtml('main', './views/step2.html', () => {
+    dm.focusNext('ccnumber');
+    cardValidation()
+});
 getHtml('footer', './views/footer.html');
 
 class ScreenSize {
@@ -17,7 +23,7 @@ class ScreenSize {
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         setMobileViewportHeight();
-        
+
     };
 }
 window.addEventListener('resize', () => {
