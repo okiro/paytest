@@ -50,6 +50,12 @@
     width: 100%;
 }
 
+#ccnumber::placeholder,
+#ccexp::placeholder,
+#cccvc::placeholder {
+    color: rgb(210, 210, 210);
+}
+
 #ccnumber {
     grid-column: span 2;
     border: solid 1px;
@@ -82,9 +88,10 @@
 }
 
 .inputErrorIcon {
-    background: url('../img/errorIcon.png') no-repeat;
+    background: url('../img/errorIcon.svg') no-repeat;
     background-color: white;
-    background-position: 95% 50%;
+    background-position: 94% 49%;
+    background-size: 16px;
     border-color: #FF7E8D !important;
     color: #FF7E8D !important;
 }
@@ -97,7 +104,8 @@
 }
 
 #inputError {
-    font-size: medium;
+    visibility: hidden;
+    font-size: small;
     color: #FF7E8D;
     line-height: 2;
 }
