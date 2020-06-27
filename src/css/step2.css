@@ -44,7 +44,7 @@
     height: 45px;
     border: 0;
     padding: 0 10px;
-    font-size: medium;
+    font-size: large;
     letter-spacing: 0.12em;
     color: black;
     width: 100%;
@@ -54,6 +54,7 @@
 #ccexp::placeholder,
 #cccvc::placeholder {
     color: rgb(210, 210, 210);
+    letter-spacing: 0.12em;
 }
 
 #ccnumber {

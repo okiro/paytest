@@ -1,38 +1,37 @@
 #fText {
-  font-size: 10px;
-  text-align: center;
-  margin: 5px;
-}
-  
-#pslogos {
-  align-self: center;
-  height: 15px;
-  margin-top:10px;
+    font-size: 10px;
+    text-align: center;
+    margin: 5px;
 }
 
-#submitButton  {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  flex-grow: 2;
-  background:  #61259E;
-  background-size: 200% 200%;
-  border-radius: 0 0 15px 15px;
-  border-width: 0;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: x-large;
-  font-weight: bold;
+#pslogos {
+    align-self: center;
+    height: 15px;
+    margin-top: 10px;
+}
+
+#submitButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex-grow: 3;
+    background: #61259E;
+    background-size: 200% 200%;
+    border-radius: 0 0 15px 15px;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 #submitButton:hover:enabled {
-  background  : linear-gradient(-45deg, #7040A0 46.9%, #2A0055 100%)
+    background: linear-gradient(-45deg, #7040A0 46.9%, #2A0055 100%)
 }
 
 #submitButton:disabled {
-  background-color: #DBCFE8;
-  cursor: not-allowed;
+    background-color: #DBCFE8;
+    cursor: not-allowed;
 }
-
