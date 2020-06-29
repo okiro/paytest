@@ -1,12 +1,15 @@
-#fText {
+.footerText {
     font-size: 10px;
     text-align: center;
     margin: 5px;
 }
 
-#pslogos {
+.pslogos {
+    background: url('../img/psLogos.png')no-repeat;
+    background-size: 100%;
     align-self: center;
     height: 15px;
+    width: 60px;
     margin-top: 10px;
 }
 
@@ -25,13 +28,15 @@
     cursor: pointer;
     font-size: x-large;
     font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #submitButton:hover:enabled {
-    background: linear-gradient(-45deg, #7040A0 46.9%, #2A0055 100%)
+    background-color: #2A0055;
 }
 
 #submitButton:disabled {
+    transition: none;
     background-color: #DBCFE8;
     cursor: not-allowed;
 }

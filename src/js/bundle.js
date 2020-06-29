@@ -1,29 +1,43 @@
 import { getHtml } from './viewLoader.js';
-import { cardValidation } from './cardValidation.js';
 import { DomManipulation } from './DomManipulation.js';
+import { cardValidation } from './cardValidation.js';
 
+let currentPage = 'step1';
 let dm = new DomManipulation();
 
-getHtml('header', './views/header.html');
-getHtml('main', './views/step2.html', () => {
-    dm.focusNext('ccnumber');
-    cardValidation()
-});
-getHtml('footer', './views/footer.html');
-
-class ScreenSize {
-    static height() {
-        return window.innerHeight;
-    }
-    static width() {
-        return window.innerWidth;
-    }
+function step2() {
+    getHtml('main', './views/step2.html', () => {
+        dm.focusNext('ccnumber');
+        cardValidation();
+        dm.submitButton('22.00 ₼ ÖDƏ', () => {
+            if (currentPage === 'step2') {
+                dm.disableElement(document.getElementById('submitButton'));
+                document.getElementById('overlay').style.visibility = 'visible';
+                document.getElementById('otp').src = "https://exchangeratesapi.io";
+            }
+        })
+    })
 }
+
+
+getHtml('header', './views/header.html');
+getHtml('main', './views/step1.html');
+getHtml('footer', './views/footer.html', () => {
+    dm.submitButton('22.00 ₼ ÖDƏ', () => {
+        if (currentPage === 'step1') {
+            step2();
+            dm.step1success();
+            dm.step2active();
+            dm.disableElement(document.getElementById('submitButton'));
+            currentPage = 'step2';
+        }
+    })
+});
+
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         setMobileViewportHeight();
-
     };
 }
 window.addEventListener('resize', () => {
@@ -35,7 +49,7 @@ window.addEventListener('resize', () => {
 
 function setMobileViewportHeight() {
     let el = document.getElementById('container');
-    el.style.setProperty('--vh', `${ScreenSize.height()}px`);
+    el.style.setProperty('--vh', `${dm.windowHeight}px`);
 }
 
 //removeIf(production)
@@ -46,7 +60,7 @@ function showNotification() {
         let el = createElement('div', 'notification');
         let v = window.matchMedia("(orientation: portrait)").matches;
         let viewMode = (v) ? 'Portrait' : 'Landscape';
-        el.textContent = `${viewMode} mode: ${ScreenSize.height()}x${ScreenSize.width()}`;
+        el.textContent = `${viewMode} mode: ${dm.windowHeigh}x${dm.windowWidth}`;
         el.className = 'show';
         timeoutId = setTimeout(() => { el.className = 'hide' }, 2000);
     }

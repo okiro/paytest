@@ -21,13 +21,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-content: center; */
     min-height: 220px;
     height: 70%;
     margin: 0 30px;
 }
 
-#inputTitle {
+.inputTitle {
     font-size: medium;
     line-height: 2;
 }
@@ -37,9 +36,7 @@
     grid-template-columns: 50% 50%;
 }
 
-#ccnumber,
-#ccexp,
-#cccvc {
+.cardInput {
     box-sizing: border-box;
     height: 45px;
     border: 0;
@@ -50,28 +47,26 @@
     width: 100%;
 }
 
-#ccnumber::placeholder,
-#ccexp::placeholder,
-#cccvc::placeholder {
+.cardInput::placeholder {
     color: rgb(210, 210, 210);
     letter-spacing: 0.12em;
 }
 
-#ccnumber {
+.ccnumber {
     grid-column: span 2;
     border: solid 1px;
     border-color: #F0F0F0;
     border-radius: 7px 7px 0 0;
 }
 
-#ccexp {
+.ccexp {
     border: solid 1px;
     border-color: #F0F0F0;
     border-radius: 0 0 0 7px;
     border-top: 0;
 }
 
-#cccvc {
+.cccvc {
     border: solid 1px;
     border-color: #F0F0F0;
     border-radius: 0 0 7px 0;
@@ -79,9 +74,7 @@
     border-left: 0;
 }
 
-#ccnumber:focus,
-#ccexp:focus,
-#cccvc:focus {
+.cardInput:focus {
     border: 1px solid #B38CDB !important;
     position: relative;
     box-shadow: 0 0 0 1px #B38CDB;
@@ -104,7 +97,7 @@
     color: #FF7E8D;
 }
 
-#inputError {
+.inputError {
     visibility: hidden;
     font-size: small;
     color: #FF7E8D;
@@ -112,12 +105,56 @@
 }
 
 @media screen and (max-width: 568px) {
-    #ccnumber,
-    #ccexp,
-    #cccvc {
+    .cardInput {
         font-size: small;
     }
-    #inputError {
+    .inputError {
         font-size: x-small;
+    }
+}
+
+
+/* 3D secure overlay */
+
+#otp {
+    border: 0;
+    width: 400px;
+    height: 600px;
+    z-index: 3;
+}
+
+#otpClose:link,
+#otpClose:visited {
+    color: #bebebe;
+    align-self: center;
+    font-size: large;
+    font-weight: bolder;
+    z-index: 3;
+    text-decoration: none;
+}
+
+#otpClose:hover {
+    color: #ffffff;
+}
+
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+@media screen and (max-width: 568px) {
+    #otp {
+        width: 90%;
+        height: 80%;
     }
 }

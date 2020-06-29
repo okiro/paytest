@@ -1,4 +1,11 @@
 export class DomManipulation {
+    get windowHeight() {
+        return window.innerHeight;
+    }
+    get windowWidth() {
+        return window.innerWidth;
+    }
+
     focusNext(id) {
         document.getElementById(id).focus();
     }
@@ -12,6 +19,31 @@ export class DomManipulation {
         element.classList.remove('inputErrorIcon');
         document.getElementById('inputError').style.visibility = 'hidden';
     }
+
+    submitButton(label, action) {
+        let el = document.getElementById('submitButton');
+        el.onclick = () => {
+            el.textContent = label;
+            action();
+        };
+    }
+
+    step1success() {
+        document.getElementById('step1c').className = "stepCircle cdone"
+    }
+
+    step2active() {
+        document.getElementById('step2c').className = "stepCircle c2active"
+    }
+
+    disableElement(element) {
+        element.disabled = true
+    }
+
+    enableElement(element) {
+        element.disabled = false
+    }
+
 
 
 }

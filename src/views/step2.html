@@ -4,11 +4,16 @@
     <div id="infoBen">Jumeyrah Hotel LLC</div>
 </div>
 <div class="inputForm">
-    <label id="inputTitle">Kart məlumatları</label>
+    <label class="inputTitle">Kart məlumatları</label>
     <div class="inputFields">
-        <input type="text" inputmode="numeric" name="ccnumber" autocomplete="cc-number" id="ccnumber" placeholder="1234 1234 1234 1234" maxlength="19">
-        <input type="text" inputmode="numeric" name="ccexp" autocomplete="cc-exp" id="ccexp" placeholder="01/24" maxlength="5">
-        <input type="text" inputmode="numeric" name="cccvc" id="cccvc" placeholder="123" maxlength="3">
+        <input type="text" class="cardInput ccnumber" inputmode="numeric" name="ccnumber" autocomplete="cc-number" id="ccnumber" placeholder="1234 1234 1234 1234" maxlength="19">
+        <input type="text" class="cardInput ccexp" inputmode="numeric" name="ccexp" autocomplete="cc-exp" id="ccexp" placeholder="01/24" maxlength="5">
+        <input type="text" class="cardInput cccvc" inputmode="numeric" name="cccvc" id="cccvc" placeholder="123" maxlength="3">
     </div>
-    <label id="inputError" style="display: v;">Daxil etdiyiniz məlumatlar səhvdir</label>
+    <label class="inputError" id="inputError">Daxil etdiyiniz məlumatlar səhvdir</label>
+</div>
+<div id="overlay">
+    <a id="otpClose" href="#">Bağla</a>
+    <iframe id="otp" src=""></iframe>
+</div>
 </div>
