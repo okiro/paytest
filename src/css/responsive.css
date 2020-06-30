@@ -8,13 +8,17 @@
         margin: 20px;
     }
     .checkoutLogo {
-        height: 23px;
+        height: 30px;
+        width: 30px;
     }
     .checkoutName {
         font-size: small;
     }
     .container {
         height: var(--vh);
+    }
+    .stepLine {
+        margin: 0 20px;
     }
     .form {
         border-radius: 0;

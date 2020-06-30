@@ -6,14 +6,14 @@
 }
 
 @font-face {
-    font-family: 'RalewayRegular';
+    font-family: 'Raleway';
     src: url('../fonts/RalewayRegular.eot') format('embedded-opentype'), url('../fonts/RalewayRegular.woff2') format('woff2'), url('../fonts/RalewayRegular.woff') format('woff'), url('../fonts/RalewayRegular.ttf') format('truetype'), url('../fonts/RalewayRegular.svg#RalewayRegular') format('svg');
 }
 
 body {
     box-sizing: border-box;
     color: #7f7f7f;
-    font-family: 'RalewayRegular', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-feature-settings: "lnum";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

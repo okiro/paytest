@@ -1,3 +1,43 @@
+<svg width="0" height="0" class="hidden">
+    <symbol fill="none" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="result">
+        <circle cx="11.5" cy="11.5" r="11.5" fill="#FEC524"></circle>
+        <path d="M7 12.4l3.53 3.6L17 7" stroke="#fff" stroke-width="1.561"></path>
+        <defs>
+            <filter id="a" x="-170" y="-202.5" width="196.55" height="816.5" color-interpolation-filters="sRGB"
+                filterUnits="userSpaceOnUse">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="30"></feGaussianBlur>
+            </filter>
+        </defs>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step1active">
+        <circle cx="11.5" cy="11.5" r="11" stroke="#FEC524"></circle>
+        <text fill="#FEC524" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em"
+            whiteSpace="pre">
+            <tspan x="8.5" y="17">1</tspan>
+        </text>
+    </symbol>
+    <symbol viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step2">
+        <circle cx="11.5" cy="11.5" r="11.5" fill="#E7E5E9"></circle>
+        <text fill="#fff" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em" whiteSpace="pre">
+            <tspan x="7.5" y="17">2</tspan>
+        </text>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step2active">
+        <circle cx="11.5" cy="11.5" r="11" stroke="#FEC524"></circle>
+        <text fill="#FEC524" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em"
+            whiteSpace="pre">
+            <tspan x="8" y="17">2</tspan>
+        </text>
+    </symbol>
+    <symbol viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step3">
+        <circle cx="11.5" cy="11.5" r="11.5" fill="#E7E5E9"></circle>
+        <text fill="#fff" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em" whiteSpace="pre">
+            <tspan x="7.5" y="17">3</tspan>
+        </text>
+    </symbol>
+</svg>
 <div class="logos">
     <div class="bankLogo"></div>
     <div class="checkout">
@@ -9,15 +49,21 @@
     <div class="stepLine"></div>
     <div class="stepNumbers">
         <div class="stepName">
-            <div id="step1c" class="stepCircle c1"></div>
+            <svg class="icon">
+                <use xlink:href="#step1active"></use>
+            </svg>
             <span class="stepLabel labelA">MƏLUMAT</span>
         </div>
         <div class="stepName">
-            <div id="step2c" class="stepCircle c2"></div>
+            <svg class="icon">
+                <use xlink:href="#step2"></use>
+            </svg>
             <span class="stepLabel">ÖDƏNİŞ</span>
         </div>
         <div class="stepName">
-            <div id="step3c" class="stepCircle c3"></div>
+            <svg class="icon">
+                <use xlink:href="#step3"></use>
+            </svg>
             <span class="stepLabel">TAMAMLA</span>
         </div>
     </div>
