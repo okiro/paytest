@@ -1,10 +1,9 @@
 @import url('style.css');
 @import url('header.css');
-@import url('main.css');
+@import url('step1.css');
+@import url('step2.css');
 @import url('footer.css');
 @import url('responsive.css');
-@import url('step2.css');
-
 #notification {
     position: absolute;
     right: 20px;

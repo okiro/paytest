@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <link rel=" stylesheet" href="../src/css/bundle.css">
+    <script>
+        function show(e) {
+            let el = document.getElementById('container');
+            el.style.setProperty('--vh', `${window.innerHeight}px`);
+        }
+    </script>
+</head>
+
+<body onresize="show()">
+    <div class="container" id="container">
+        <div class="form">
+            <header>
+                <svg width="0" height="0" class="hidden">
+                    <symbol fill="none" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="result">
+                        <circle cx="11.5" cy="11.5" r="11.5" fill="#FEC524"></circle>
+                        <path d="M7 12.4l3.53 3.6L17 7" stroke="#fff" stroke-width="1.561"></path>
+                        <defs>
+                            <filter id="a" x="-170" y="-202.5" width="196.55" height="816.5"
+                                color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="30"></feGaussianBlur>
+                            </filter>
+                        </defs>
+                    </symbol>
+                    <symbol fill="none" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step1active">
+                        <circle cx="11.5" cy="11.5" r="11" stroke="#FEC524"></circle>
+                        <text fill="#FEC524" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em"
+                            whiteSpace="pre">
+                            <tspan x="8.5" y="17">1</tspan>
+                        </text>
+                    </symbol>
+                    <symbol viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step2">
+                        <circle cx="11.5" cy="11.5" r="11.5" fill="#E7E5E9"></circle>
+                        <text fill="#fff" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em"
+                            whiteSpace="pre">
+                            <tspan x="7.5" y="17">2</tspan>
+                        </text>
+                    </symbol>
+                    <symbol fill="none" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step2active">
+                        <circle cx="11.5" cy="11.5" r="11" stroke="#FEC524"></circle>
+                        <text fill="#FEC524" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em"
+                            whiteSpace="pre">
+                            <tspan x="8" y="17">2</tspan>
+                        </text>
+                    </symbol>
+                    <symbol viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" id="step3">
+                        <circle cx="11.5" cy="11.5" r="11.5" fill="#E7E5E9"></circle>
+                        <text fill="#fff" font-family="Raleway" font-size="14" font-weight="500" letter-spacing="0em"
+                            whiteSpace="pre">
+                            <tspan x="7.5" y="17">3</tspan>
+                        </text>
+                    </symbol>
+                </svg>
+                <div class="logos">
+                    <div class="bankLogo"></div>
+                    <div class="checkout">
+                        <div class="checkoutLogo"></div>
+                        <div class="checkoutName">səbət</div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="stepLine"></div>
+                    <div class="stepNumbers">
+                        <div class="stepName">
+                            <svg class="icon">
+                                <use xlink:href="#step1active"></use>
+                            </svg>
+                            <span class="stepLabel labelA">MƏLUMAT</span>
+                        </div>
+                        <div class="stepName">
+                            <svg class="icon">
+                                <use xlink:href="#step2"></use>
+                            </svg>
+                            <span class="stepLabel">ÖDƏNİŞ</span>
+                        </div>
+                        <div class="stepName">
+                            <svg class="icon">
+                                <use xlink:href="#step3"></use>
+                            </svg>
+                            <span class="stepLabel">TAMAMLA</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="cards">
+                    <div class="card topCard">
+                        <div class="cardTitle">Ödəyən</div>
+                        <div class="cardContent">Həşimzadə Ramin</div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTitle">Mobil Nömrə</div>
+                        <div class="cardContent">+994 (50) 123 45 67</div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTitle">Kimə Ödənilir</div>
+                        <div class="cardContent">Jumeyrah Hotel LLC</div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTitle">Təyinat</div>
+                        <div class="cardContent">2 nəfərlik otaq (King Bed)</div>
+                    </div>
+                    <div class="card bottomCard">
+                        <div class="amountWord">Məbləğ</div>
+                        <div class="amountSum">22.00<span> azn</span></div>
+                    </div>
+                </div>
+
+            </main>
+            <footer>
+                <div class="pslogos"></div>
+                <span class="footerText">Azər Türk Bank tərəfindən təmin edilən 3D-Secure ödəmə xidmətləri © 2020</span>
+                <button type="button" id="submitButton">İrəli</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

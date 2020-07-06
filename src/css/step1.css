@@ -1,0 +1,60 @@
+  .cards {
+      display: flex;
+      flex-direction: column;
+      min-height: 300px;
+      height: 100%;
+  }
+  
+  .card {
+      align-items: center;
+      background-color: #fff;
+      display: flex;
+      flex-grow: 1;
+      font-size: small;
+      margin: 1px 20px;
+  }
+  
+  .card:hover {
+      background-color: rgb(250, 250, 250);
+  }
+  
+  .topCard {
+      border-radius: 5px 5px 0 0;
+  }
+  
+  .bottomCard {
+      align-items: flex-end;
+      border-radius: 0 0 5px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 2;
+  }
+  
+  .cardTitle {
+      margin-left: 20px;
+  }
+  
+  .cardContent {
+      color: #3e3e3e;
+      font-weight: bold;
+      margin-left: auto;
+      margin-right: 20px;
+      max-width: 200px;
+      text-align: right;
+  }
+  
+  .amountWord {
+      font-weight: 200;
+      margin-right: 20px;
+  }
+  
+  .amountSum {
+      color: #3e3e3e;
+      font-size: xx-large;
+      margin-right: 20px;
+  }
+  
+  .amountSum>span {
+      font-size: medium;
+  }
